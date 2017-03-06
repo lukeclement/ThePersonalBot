@@ -87,7 +87,7 @@ public class bot{
     people.add("defaintfart");
     people.add("pugsandpizzas");
     people.add("tobtob129");
-    people.add("phillipclement")
+    people.add("phillipclement");
     people.add("itsliameveryone");
     people.add("BeccaAnnTaylor");
     people.add("masterJ_clement");
