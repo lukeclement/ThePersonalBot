@@ -69,7 +69,7 @@ public class bot{
     adjective.add("spectcular");
     adjective.add("spiffing");
     adjective.add("bright");
-    adjective.add("stellar")
+    adjective.add("stellar");
 
     List<String> people=new ArrayList<>();
     people.add("beth_goodhew");
