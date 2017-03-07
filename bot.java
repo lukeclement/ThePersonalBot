@@ -76,9 +76,9 @@ public class bot{
     people.add("itshanfran");
     people.add("cclari_");
     people.add("The_3d_Man");
-    people.add("David_taylorr");
     people.add("0llie_C");
     people.add("sarah_nesfield");
+    people.add("cgc6th");
     people.add("ShonaLthomson");
     people.add("faye_batchelor");
     people.add("tracyjclement");
@@ -127,6 +127,9 @@ public class bot{
             Status status = twitter.updateStatus("Good evening @"+people.get(person)+"! I hope you had a "+adjective.get(comp+2)+" day today! Make sure tomorrow is "+adjective.get(comp+3)+"!");
 
             person++;
+            if(person=people.size()){
+              person=0;
+            }
             if(comp+4<adjective.size()){
               comp=0;
             }
