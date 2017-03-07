@@ -71,6 +71,8 @@ public class bot{
     adjective.add("bright");
     adjective.add("stellar");
 
+    adjective.add("astounding");
+
     List<String> people=new ArrayList<>();
     people.add("beth_goodhew");
     people.add("itshanfran");
@@ -78,6 +80,7 @@ public class bot{
     people.add("The_3d_Man");
     people.add("0llie_C");
     people.add("sarah_nesfield");
+    people.add("Josh4468");
     people.add("cgc6th");
     people.add("ShonaLthomson");
     people.add("faye_batchelor");
@@ -121,7 +124,6 @@ public class bot{
         try{
           if(hour==8){
             Status status = twitter.updateStatus("Good morning @"+people.get(person)+"! I hope you have a "+adjective.get(comp)+" day today! Make sure it's "+adjective.get(comp+1)+"!");
-
           }
           else if(hour==21){
             Status status = twitter.updateStatus("Good evening @"+people.get(person)+"! I hope you had a "+adjective.get(comp+2)+" day today! Make sure tomorrow is "+adjective.get(comp+3)+"!");
@@ -133,7 +135,9 @@ public class bot{
             if(comp+4<adjective.size()){
               comp=0;
             }
-            comp=+4;
+            else{
+              comp=+4;
+            }
 
             try{
               FileWriter write = new FileWriter("boop.txt", true);
