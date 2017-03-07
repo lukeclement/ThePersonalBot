@@ -127,7 +127,7 @@ public class bot{
             Status status = twitter.updateStatus("Good evening @"+people.get(person)+"! I hope you had a "+adjective.get(comp+2)+" day today! Make sure tomorrow is "+adjective.get(comp+3)+"!");
 
             person++;
-            if(person=people.size()){
+            if(person==people.size()){
               person=0;
             }
             if(comp+4<adjective.size()){
