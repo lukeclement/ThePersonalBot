@@ -125,22 +125,52 @@ public class bot{
           if(hour==8){
             Status status = twitter.updateStatus("Good morning @"+people.get(person)+"! I hope you have a "+adjective.get(comp)+" day today! Make sure it's "+adjective.get(comp+1)+"!");
           }
-          else if(hour==21){
+          /*else if(hour==12){
+            int num=math.floor(math.random()*);
+            switch(num){
+              case 0:
+                Status status= twitter.updateStatus("I hope everyone has had a "+adjective.get((int)(math.random()*adjective.size()))+" morning! Keep it going throught the afternoon!");
+              break;
+              case 1:
+                Status status=twitter.updateStatus();
+              break;
+              case 2:
+                Status status=twitter.updateStatus();
+              break;
+              case 3:
+                Status status=twitter.updateStatus();
+              break;
+              case 4:
+                Status status=twitter.updateStatus();
+              break;
+              case 5:
+                Status status=twitter.updateStatus();
+              break;
+              case 6:
+                Status status=twitter.updateStatus();
+              break;
+              case default:
+                Status status=twitter.updateStatus();
+              break;
+
+            }
+
+          }
+          */else if(hour==21){
             Status status = twitter.updateStatus("Good evening @"+people.get(person)+"! I hope you had a "+adjective.get(comp+2)+" day today! Make sure tomorrow is "+adjective.get(comp+3)+"!");
 
             person++;
             if(person==people.size()){
               person=0;
             }
-            if(comp+4<adjective.size()){
+            if((comp+4)>adjective.size()){
               comp=0;
-            }
-            else{
+            }else{
               comp=+4;
             }
 
             try{
-              FileWriter write = new FileWriter("boop.txt", true);
+              FileWriter write = new FileWriter("boop.txt", false);
               PrintWriter print_line = new PrintWriter(write);
               print_line.printf( "%s" + "%n" , person);
               print_line.printf( "%s" + "%n" , comp);
