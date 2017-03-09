@@ -122,48 +122,73 @@ public class bot{
         String str = sdf.format(new Date());
         int hour=Integer.parseInt(str);
         try{
+          int num=0;
           if(hour==8){
-            Status status = twitter.updateStatus("Good morning @"+people.get(person)+"! I hope you have a "+adjective.get(comp)+" day today! Make sure it's "+adjective.get(comp+1)+"!");
-          }
-          /*else if(hour==12){
-            int num=math.floor(math.random()*);
+            num=(int)Math.floor(Math.random()*4);
             switch(num){
               case 0:
-                Status status= twitter.updateStatus("I hope everyone has had a "+adjective.get((int)(math.random()*adjective.size()))+" morning! Keep it going throught the afternoon!");
+                Status status = twitter.updateStatus("Good morning @"+people.get(person)+"! I hope you have a "+adjective.get(comp)+" day today! Make sure it's "+adjective.get(comp+1)+"!");
               break;
               case 1:
-                Status status=twitter.updateStatus();
+                Status statusa=twitter.updateStatus("Good morning @"+people.get(person)+"! I have a feeling today will be "+adjective.get(comp)+"! I hope you enjoy a "+adjective.get(comp+1)+" day today!");
               break;
               case 2:
-                Status status=twitter.updateStatus();
+                Status statusb=twitter.updateStatus("Hey @"+people.get(person)+", just wanted to wish you have a "+adjective.get(comp)+" day today! I'm sure it will be "+adjective.get(comp+1)+"!");
               break;
               case 3:
-                Status status=twitter.updateStatus();
+                Status statusc=twitter.updateStatus("Another "+adjective.get(comp)+" day has dawned on us! Here's hoping @"+people.get(person)+" has a "+adjective.get(comp+1)+" day today!");
               break;
-              case 4:
-                Status status=twitter.updateStatus();
+              default:
+                Status statusd=twitter.updateStatus("Good morning @"+people.get(person)+"! I hope you have a "+adjective.get(comp)+" day today! Make sure it's "+adjective.get(comp+1)+"!");
               break;
-              case 5:
-                Status status=twitter.updateStatus();
+            }
+          }
+          else if(hour==12){
+            num=(int)Math.floor(Math.random()*4);
+            switch(num){
+              case 0:
+                Status status= twitter.updateStatus("I hope everyone has had a "+adjective.get((int)(Math.random()*adjective.size()))+" morning! Keep it going throught the afternoon!");
               break;
-              case 6:
-                Status status=twitter.updateStatus();
+              case 1:
+                Status statusa=twitter.updateStatus("Keep on powering through the day! Only half way there now, I'm sure you can make it "+adjective.get((int)(Math.random()*adjective.size()))+"!");
               break;
-              case default:
-                Status status=twitter.updateStatus();
+              case 2:
+                Status statusb=twitter.updateStatus("Morning is over, time to make the afternoon "+adjective.get((int)(Math.random()*adjective.size()))+"!");
               break;
-
+              case 3:
+                Status statusc=twitter.updateStatus("Hey @"+people.get((int)(Math.random()*people.size()))+", make sure to make your afternoon "+adjective.get((int)(Math.random()*adjective.size()))+"!");
+              break;
+              default:
+                Status statusd=twitter.updateStatus("I hope everyone has had a "+adjective.get((int)(Math.random()*adjective.size()))+" morning! Keep it going throught the afternoon!");
+              break;
             }
 
           }
-          */else if(hour==21){
-            Status status = twitter.updateStatus("Good evening @"+people.get(person)+"! I hope you had a "+adjective.get(comp+2)+" day today! Make sure tomorrow is "+adjective.get(comp+3)+"!");
+          else if(hour==21){
+            num=(int)Math.floor(Math.random()*4);
+            switch(num){
+              case 0:
+                Status status = twitter.updateStatus("Good evening @"+people.get(person)+"! I hope you had a "+adjective.get(comp+2)+" day today! Make sure tomorrow is "+adjective.get(comp+3)+"!");
+              break;
+              case 1:
+                Status statusa=twitter.updateStatus("Good evening @"+people.get(person)+", did you have a "+adjective.get(comp+2)+" day today? I hope tomorrow is "+adjective.get(comp+3)+" for you!");
+              break;
+              case 2:
+                Status statusb=twitter.updateStatus("What a "+adjective.get(comp+2)+" evening! I hope @"+people.get(person)+" had a "+adjective.get(comp+3)+" day today!");
+              break;
+              case 3:
+                Status statusc=twitter.updateStatus("Hoping @"+people.get(person)+" had a "+adjective.get(comp+2)+" day today! I'm sure they'll have a "+adjective.get(comp+3)+" day tomorrow!");
+              break;
+              default:
+                Status statusd=twitter.updateStatus("Good evening @"+people.get(person)+"! I hope you had a "+adjective.get(comp+2)+" day today! Make sure tomorrow is "+adjective.get(comp+3)+"!");
+              break;
+            }
 
             person++;
             if(person==people.size()){
               person=0;
             }
-            if((comp+4)>adjective.size()){
+            if((comp+4)>=adjective.size()){
               comp=0;
             }else{
               comp=+4;
