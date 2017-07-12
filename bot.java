@@ -25,12 +25,12 @@ public class bot{
     adjective.add("radiant");
     adjective.add("splendid");
     adjective.add("magnificent");
-    //
+
     adjective.add("excellent");
     adjective.add("outstanding");
     adjective.add("exceptional");
     adjective.add("glorious");
-    //
+
     adjective.add("grand");
     adjective.add("resplendent");
     adjective.add("delightful");
@@ -75,6 +75,7 @@ public class bot{
 
     List<String> people=new ArrayList<>();
     people.add("beth_goodhew");
+    people.add("libertymay_")
     people.add("itshanfran");
     people.add("cclari_");
     people.add("The_3d_Man");
@@ -90,8 +91,7 @@ public class bot{
     people.add("defaintfart");
     people.add("pugsandpizzas");
     people.add("tobtob129");
-    people.add("phillipclement");
-    people.add("itsliameveryone");
+    people.add("philipclement");
     people.add("BeccaAnnTaylor");
     people.add("masterJ_clement");
     people.add("tdclement");
