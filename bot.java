@@ -75,7 +75,7 @@ public class bot{
 
     List<String> people=new ArrayList<>();
     people.add("beth_goodhew");
-    people.add("libertymay_")
+    people.add("libertymay_");
     people.add("itshanfran");
     people.add("cclari_");
     people.add("The_3d_Man");
@@ -113,6 +113,8 @@ public class bot{
     SimpleDateFormat sdfa = new SimpleDateFormat("HH:mm:ss");
     String stuff=sdfa.format(new Date());
     System.out.println("Initiated at "+stuff);
+    Status initial= twitter.updateStatus("The automated system has been switched on yet again at "+stuff+"!");
+    System.out.println("Successful start tweet!");
     while(true){
       SimpleDateFormat sss = new SimpleDateFormat("mm");
       String check=sss.format(new Date());
